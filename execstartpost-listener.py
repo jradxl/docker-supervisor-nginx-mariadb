@@ -42,7 +42,7 @@ def main():
                             log.debug("STDERR: " + cp.stderr)
 
                 except:
-                    log.debug("ERROR upgrading MariaDB: ", sys.exc_info()[0])
+                    log.debug("ERROR upgrading MariaDB: " + sys.exc_info()[0])
                     childutils.listener.ok()
                     exit(1)
 
@@ -60,7 +60,7 @@ def main():
                     log.debug("Done securing MariaDB")
 
                 except:
-                    log.debug("ERROR securing MariaDB: ", sys.exc_info()[0])
+                    log.debug("ERROR securing MariaDB: " + sys.exc_info()[0])
                     childutils.listener.ok()
                     exit(1)
 
